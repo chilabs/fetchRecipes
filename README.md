@@ -3,6 +3,9 @@
 
 A simple recipe app that shows a list of recipes and allows you to tap in to see a detailed page with a larger image.
 
+<img width="425" alt="Image" src="https://github.com/user-attachments/assets/e8b091fc-4540-47e5-abdc-3153bdda261f" />
+<img width="431" alt="Image" src="https://github.com/user-attachments/assets/a5d56668-bed6-4a11-826e-a8a57ea6bfdf" />
+
 ### Focus Areas: What specific areas of the project did you prioritize? Why did you choose to focus on these areas?
 
 I decided to focus on the image caching and using structured concurrency to ensure it is thread-safe. I focused on this area since per the instructions I couldn't use 3rd party libraries or the standard Apple libraries to achieve what I wanted.
@@ -28,7 +31,7 @@ If there was more time, I would improve the following things:
 - There's no mechanism to manually expire the items in the image cache, it might make sense to do that from the server in case the image is updated.
 - Limit the size of the disk cache by manually removing older images once it reaches a certain size.
 - Add features like searching/filtering/sorting the list of recipes, show the youtube video on the recipe detail page
-- Update tlist of recipes after a TTL is reached, currently it only supports manual pull to refresh
+- Update list of recipes after a TTL is reached automatically, currently it only supports manual pull to refresh
 - Using a dependency injection framework so it's easier to test things like singletons, etc
 - Would add some additional testing for failure cases to simulate graceful handling of network errors, disk errors, etc
 - For a production app, there should be error logging to the server, crash reporting, performance monitoring of load times for different screens, monitoring of memory use, cache size, etc
